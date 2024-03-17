@@ -8,122 +8,118 @@ db.once('open', async () => {
   await cleanDB('User', 'users');
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Aries' },
+    { name: 'Taurus' },
+    { name: 'Gemini' },
+    { name: 'Cancer' },
+    { name: 'Leo' },
+    { name: 'Virgo' },
+    { name: 'Libra' },
+    { name: 'Scorpio' },
+    { name: 'Sagittarius' },
+    { name: 'Capricorn' },
+    { name: 'Aquarius' },
+    { name: 'Pisces' }
   ]);
 
   console.log('categories seeded');
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
-      description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+      name: 'Baby Ram Onesie',
+      description: 'Adorable onesie with a ram design for little Aries babies!',
+      image: 'baby-ram-onesie.jpg',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
-    },
-    {
-      name: 'Canned Coffee',
-      description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
-      category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
-    },
-    {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
-      description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20
-    },
-    {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
+      price: 12.99,
       quantity: 50
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: 'Taurus Plush Toy',
+      description: 'Soft and cuddly plush toy perfect for little Taurus babies!',
+      image: 'taurus-plush-toy.jpg',
       category: categories[1]._id,
-      description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
       price: 14.99,
-      quantity: 100
+      quantity: 40
     },
     {
-      name: 'Camera',
+      name: 'Gemini Baby Book',
+      description: 'Interactive baby book with dual storytelling for curious Gemini babies!',
+      image: 'gemini-baby-book.jpg',
       category: categories[2]._id,
-      description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
+      price: 9.99,
       quantity: 30
     },
     {
-      name: 'Tablet',
-      category: categories[2]._id,
-      description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
-    },
-    {
-      name: 'Tales at Bedtime',
+      name: 'Cancer Moon Night Light',
+      description: 'Gentle night light shaped like a crescent moon for calming Cancer babies!',
+      image: 'cancer-moon-night-light.jpg',
       category: categories[3]._id,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
+      price: 19.99,
+      quantity: 20
+    },
+    {
+      name: 'Leo Lion Rattle',
+      description: 'Colorful lion-shaped rattle to entertain little Leo babies!',
+      image: 'leo-lion-rattle.jpg',
+      category: categories[4]._id,
+      price: 8.99,
+      quantity: 40
+    },
+    {
+      name: 'Virgo Baby Blanket',
+      description: 'Soft and cozy blanket with a delicate design for sweet Virgo babies!',
+      image: 'virgo-baby-blanket.jpg',
+      category: categories[5]._id,
+      price: 17.99,
+      quantity: 25
+    },
+    {
+      name: 'Libra Scales Teether',
+      description: 'Safe and soothing teether shaped like Libra scales for teething Libra babies!',
+      image: 'libra-scales-teether.jpg',
+      category: categories[6]._id,
+      price: 6.99,
+      quantity: 35
+    },
+    {
+      name: 'Scorpio Scorpion Mobile',
+      description: 'Whimsical mobile featuring scorpion designs for imaginative Scorpio babies!',
+      image: 'scorpio-scorpion-mobile.jpg',
+      category: categories[7]._id,
+      price: 24.99,
+      quantity: 15
+    },
+    {
+      name: 'Sagittarius Adventure Onesie',
+      description: 'Explore-themed onesie for adventurous Sagittarius babies!',
+      image: 'sagittarius-adventure-onesie.jpg',
+      category: categories[8]._id,
+      price: 11.99,
+      quantity: 45
+    },
+    {
+      name: 'Capricorn Mountain Rattle',
+      description: 'Mountain-shaped rattle to stimulate little Capricorn babies!',
+      image: 'capricorn-mountain-rattle.jpg',
+      category: categories[9]._id,
       price: 9.99,
-      quantity: 100
+      quantity: 40
     },
     {
-      name: 'Spinning Top',
-      category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
+      name: 'Aquarius Star Mobile',
+      description: 'Celestial-themed mobile with stars and moons for dreamy Aquarius babies!',
+      image: 'aquarius-star-mobile.jpg',
+      category: categories[10]._id,
+      price: 22.99,
+      quantity: 30
     },
     {
-      name: 'Set of Plastic Horses',
-      category: categories[4]._id,
-      description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
-    },
-    {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
-    },
-    {
-      name: 'Alphabet Blocks',
-      category: categories[4]._id,
-      description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
+      name: 'Pisces Ocean Play Mat',
+      description: 'Interactive play mat with ocean motifs for imaginative Pisces babies!',
+      image: 'pisces-ocean-play-mat.jpg',
+      category: categories[11]._id,
+      price: 29.99,
+      quantity: 20
     }
   ]);
 
